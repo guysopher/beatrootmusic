@@ -1,1 +1,1 @@
-This is the code for beatroot's website
+Welcome to the code of beatroot's website!
