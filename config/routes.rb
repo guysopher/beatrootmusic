@@ -1,4 +1,9 @@
 Beatrootmusic::Application.routes.draw do
+
+  root to: 'pages#index'
+
+  resources :pages
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
