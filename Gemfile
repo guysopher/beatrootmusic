@@ -27,7 +27,6 @@ end
 
 gem 'jquery-rails', '2.1.4'
 gem 'jquery-ui-rails'
-gem 'active_scaffold'
 
 group :test do
   gem 'capybara', '1.1.2'
