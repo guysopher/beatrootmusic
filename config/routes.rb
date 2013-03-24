@@ -1,8 +1,14 @@
 Beatrootmusic::Application.routes.draw do
 
-  root to: 'pages#index'
+  resources :sections do as_routes end
+
+  resources :users do as_routes end
 
   resources :pages
+
+  root to: 'application#index'
+  match '/:page' => 'pages#show'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

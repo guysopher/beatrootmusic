@@ -1,12 +1,9 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
       <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home", '#' %></li>
-          <li><%= link_to "Music", '#' %></li>
+        <ul>
+          <li><%= link_to "Home",   '#', :onclick=>"show_page(this, 'home');"   , :class=>'active' %></li>
+          <li><%= link_to "Music",  '#', :onclick=>"show_page(this, 'music');"   %></li>
+          <li><%= link_to "Videos", '#', :onclick=>"show_page(this, 'videos');"  %></li>
+          <li><%= link_to "Shows",  '#', :onclick=>"show_page(this, 'shows');"   %></li>
+          <li><%= link_to "Contact",'#', :onclick=>"show_page(this, 'contact');" %></li>
         </ul>
       </nav>
-    </div>
-  </div>
-</header>

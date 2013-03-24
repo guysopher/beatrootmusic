@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
+
+  layout 'admin'
+
   def index
     @pages = Page.all
 

@@ -8,6 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require active_scaffold
  *= require_self
  *= require_tree .
  */
@@ -20,6 +21,7 @@ html{
 body{
     height: 100%;
     width: 100%;
+    font-family: verdana;
 }
 .container{
     z-index: 1;
@@ -54,6 +56,7 @@ body{
     background-size: cover;
     position:relative;
     margin:10px 0;
+  border-radius:5px;
 }
 
 #sidebar{
@@ -64,8 +67,51 @@ body{
 }
 
 #content{
-    height: auto;
-    width:690px;
-    float:left;
-    overflow-x:hidden;
+  height: auto;
+  width:670px;
+  float:left;
+  overflow-x:hidden;
+  background: #111;
+  border-radius:5px;
+  padding: 10px;
+  min-height: 500px;
+  border:1px solid #222;
+}
+
+#page{
+  height: auto;
+  width:100%;
+  margin:10px 0;
+  color:#fefefe;
+  .page{
+    display:none;
+  }
+  #home{
+    display:block;
+  }
+}
+
+nav{
+  display:block;
+  ul{
+    height: 40px;
+    margin: 0;
+    border-radius: 5px;
+    background: #fefefe;
+    border: 1px solid #ccc;
+    li{
+      line-height:30px;
+      list-style: none;
+      float: left;
+      padding: 5px 10px;
+      a{
+        color: #111;
+        text-decoration: none;
+        &:hover, &.active{
+          color:red;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

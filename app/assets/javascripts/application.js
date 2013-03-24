@@ -12,9 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require active_scaffold
 //= require_tree .
 
 function resize(){
 
 }
 
+function show_page(nav, page){
+    $('.page').slideUp();
+    $('#' + page).slideDown();
+    $('nav li a').removeClass('active');
+    $(nav).addClass('active');
+}
