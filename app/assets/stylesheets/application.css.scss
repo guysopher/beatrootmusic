@@ -92,12 +92,11 @@ body{
 
 #content{
   height: auto;
-  width:670px;
+  width:690px;
   float:left;
   overflow-x:hidden;
   background: #111;
   border-radius:5px;
-  padding: 10px;
   min-height: 500px;
   border:1px solid #222;
 }
@@ -105,7 +104,7 @@ body{
 #page{
   height: auto;
   width:100%;
-  margin:10px 0;
+  padding: 10px;
   color:#fefefe;
   .page{
     display:none;
@@ -121,6 +120,8 @@ nav{
     height: 40px;
     margin: 0;
     border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     background: #fefefe;
     border: 1px solid #ccc;
     li{
