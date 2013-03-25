@@ -41,21 +41,21 @@ body{
 
 #wrapper{
     height: 100%;
-    width: 1000px;
+    width: 960px;
     position: relative;
     margin:auto;
 }
 #banner{
-    height:300px;
+    height:400px;
     width:100%;
     background: #111 url("banner/Beatroot_WebBanner_01.jpg") no-repeat center center; /*url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/375236_541774795833230_1975850575_b.jpg) no-repeat center center fixed;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    //-webkit-background-size: cover;
+    //-moz-background-size: cover;
+    //-o-background-size: cover;
+    //background-size: cover;
     position:relative;
     margin:10px 0;
-  border-radius:5px;
+    border-radius:5px;
 }
 
 #sidebar{
@@ -92,7 +92,7 @@ body{
 
 #content{
   height: auto;
-  width:690px;
+  width:650px;
   float:left;
   overflow-x:hidden;
   background: #111;

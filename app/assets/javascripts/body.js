@@ -7,4 +7,15 @@
 $(function(){
     wWidth = $(window).width();
     wHeight = $(window).height();
+
+    bHeight = $('#banner').height();
+});
+
+$(window).scroll(function(e){
+    var h = Math.max(0, (bHeight - $(window).scrollTop()));
+    var p = Math.min(bHeight, $(window).scrollTop());
+    $('#banner').css({
+        'height' : h,
+        'margin-top' : p + 10
+    });
 });
