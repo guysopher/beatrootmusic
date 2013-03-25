@@ -1,9 +1,9 @@
       <nav>
         <ul>
-          <li><%= link_to "Home",   '#', :onclick=>"show_page(this, 'home');"   , :class=>'active' %></li>
-          <li><%= link_to "Music",  '#', :onclick=>"show_page(this, 'music');"   %></li>
-          <li><%= link_to "Videos", '#', :onclick=>"show_page(this, 'videos');"  %></li>
-          <li><%= link_to "Shows",  '#', :onclick=>"show_page(this, 'shows');"   %></li>
-          <li><%= link_to "Contact",'#', :onclick=>"show_page(this, 'contact');" %></li>
+          <% first = true %>
+          <% @pages.each do |p| %>
+            <li><%= link_to p.name, '#', :onclick=>"show_page(this, '#{p.name.downcase}');", :class=>(first ? 'active' : '') %></li>
+            <% first = false %>
+          <% end %>
         </ul>
       </nav>

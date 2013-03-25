@@ -1,5 +1,5 @@
 <% @pages.each do |p| %>
-   <div id='<%=p.name%>' class='page'>
+   <div id='<%=p.name.downcase%>' class='page'>
        <%=raw p.content%>
    </div>
 <% end %>
