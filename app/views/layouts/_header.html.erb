@@ -1,9 +1,11 @@
-      <nav>
-        <ul>
-          <% first = true %>
-          <% @pages.each do |p| %>
-            <li><%= link_to p.name, '#', :onclick=>"show_page(this, '#{p.name.downcase}');", :class=>(first ? 'active' : '') %></li>
-            <% first = false %>
-          <% end %>
-        </ul>
-      </nav>
+<div class='nav'>
+  <div>
+    <ul>
+      <% first = true %>
+      <% @pages.each do |p| %>
+        <li onclick="show_page(this, '<%=p.name.downcase%>');" class="<%=(first ? 'active' : '')%>"><%= link_to p.name, '#', :class=>(first ? 'active' : '') %></li>
+        <% first = false %>
+      <% end %>
+    </ul>
+  </div>
+</div>

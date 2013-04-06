@@ -14,13 +14,10 @@
 //= require jquery_ujs
 //= require_tree .
 
-function resize(){
-
-}
 
 function show_page(nav, page){
     $('.page').slideUp();
     $('#' + page).slideDown();
-    $('nav li a').removeClass('active');
+    $('.nav li').removeClass('active');
     $(nav).addClass('active');
 }

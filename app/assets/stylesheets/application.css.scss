@@ -12,6 +12,13 @@
  *= require_tree .
  */
 
+$red : #8c2c22;
+$gray : #242424;
+$gray_top : #444444;
+$gray_bottom : #222222;
+$black : #111111;
+$white : #555555;
+
 html{
     height: 100%;
     width: 100%;
@@ -41,12 +48,13 @@ body{
 
 #wrapper{
     height: 100%;
-    width: 960px;
+    width: 100%;
+    max-width: 1200px;
     position: relative;
     margin:auto;
 }
 #banner{
-    height:400px;
+    height:100px;
     width:100%;
     background: #111 url("banner/Beatroot_WebBanner_01.jpg") no-repeat center center; /*url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/375236_541774795833230_1975850575_b.jpg) no-repeat center center fixed;*/
     //-webkit-background-size: cover;
@@ -55,17 +63,17 @@ body{
     //background-size: cover;
     position:relative;
     margin:10px 0;
-    border-radius:5px;
+    border-radius:2px;
 }
 
 #sidebar{
   height: auto;
-  width:300px;
+  width:400px;
   float:right;
   overflow-x:hidden;
   div.stream{
     margin-bottom:10px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: 1px solid #666;
     overflow:hidden;
     iframe{
@@ -91,14 +99,15 @@ body{
 }
 
 #content{
-  height: auto;
-  width:650px;
+  height: 100%;
+  width:100%;
   float:left;
   overflow-x:hidden;
   background: #111;
-  border-radius:5px;
+  border-radius:2px;
   min-height: 500px;
   border:1px solid #222;
+  position: relative;
 }
 
 #page{
@@ -106,6 +115,7 @@ body{
   width:100%;
   padding: 10px;
   color:#fefefe;
+  margin-top:50px;
   .page{
     display:none;
   }
@@ -114,26 +124,69 @@ body{
   }
 }
 
-nav{
+.nav{
   display:block;
+  height: 50px;
+  position:absolute;
+  top:0px;
+  width:100%;
+  margin: 0;
+  border-radius: 2px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  background-image: -ms-linear-gradient(top, $gray_top 0%, $gray_bottom 100%);
+  background-image: -moz-linear-gradient(top, $gray_top 0%, $gray_bottom 100%);
+  background-image: -o-linear-gradient(top, $gray_top 0%, $gray_bottom 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $gray_top), color-stop(1, $gray_bottom));
+  background-image: -webkit-linear-gradient(top, $gray_top 0%, $gray_bottom 100%);
+  background-image: linear-gradient(to bottom, $gray_top 0%, $gray_bottom 100%);
   ul{
-    height: 40px;
-    margin: 0;
-    border-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    background: #fefefe;
-    border: 1px solid #ccc;
+
+    height: 38px;
+    margin:5px;
+    border: 1px solid $black;
+    border-width:1px 0;
+
     li{
-      line-height:30px;
+      line-height:38px;
+      height:38px;
       list-style: none;
       float: left;
-      padding: 5px 10px;
+      text-align: center;
+
+      background-image: -ms-linear-gradient(top, $gray_top 0%, $gray_bottom 100%);
+      background-image: -moz-linear-gradient(top, $gray_top 0%, $gray_bottom 100%);
+      background-image: -o-linear-gradient(top, $gray_top 0%, $gray_bottom 100%);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $gray_top), color-stop(1, $gray_bottom));
+      background-image: -webkit-linear-gradient(top, $gray_top 0%, $gray_bottom 100%);
+      background-image: linear-gradient(to bottom, $gray_top 0%, $gray_bottom 100%);
+
+      border: 1px solid $black;
+      border-color: $black $white $black $black ;
+      border-width: 0 1px;
+
+      color: $white;
+      cursor: pointer;
+
+      &:hover{
+        color:red;
+      }
+      &.active{
+        color:red;
+        background-image: -ms-linear-gradient(top, $gray_bottom 0%, $gray_top 100%);
+        background-image: -moz-linear-gradient(top, $gray_bottom 0%, $gray_top 100%);
+        background-image: -o-linear-gradient(top, $gray_bottom 0%, $gray_top 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $gray_bottom), color-stop(1, $gray_top));
+        background-image: -webkit-linear-gradient(top, $gray_bottom 0%, $gray_top 100%);
+        background-image: linear-gradient(to bottom, $gray_bottom 0%, $gray_top 100%);
+      }
       a{
-        color: #111;
+        color:inherit;
         text-decoration: none;
+        text-align: center;
+
         &:hover, &.active{
-          color:red;
           text-decoration: none;
         }
       }

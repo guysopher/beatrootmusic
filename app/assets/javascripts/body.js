@@ -9,6 +9,11 @@ $(function(){
     wHeight = $(window).height();
 
     bHeight = $('#banner').height();
+    bWidth = $('#banner').width();
+
+    sHeight = $('#sidebar').height();
+
+    resize();
 });
 
 $(window).scroll(function(e){
@@ -18,4 +23,18 @@ $(window).scroll(function(e){
         'height' : h,
         'margin-top' : p + 10
     });
+});
+
+function resize(){
+    var w = bWidth - 400 - 10;
+    $('#content').css({
+        'width' : w,
+        'height' : sHeight
+    });
+    $('#content .nav li').css({
+        'width' : ((w-10) / ($('#content .nav li').length)) - 2,
+    });
+}
+$(window).resize(function(e){
+    resize();
 });
