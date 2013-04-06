@@ -12,7 +12,7 @@
  *= require_tree .
  */
 
-$red : #8c2c22;
+$red : #991d1d;
 $gray : #242424;
 $gray_top : #444444;
 $gray_bottom : #222222;
@@ -170,10 +170,10 @@ body{
       cursor: pointer;
 
       &:hover{
-        color:red;
+        color:$red;
       }
       &.active{
-        color:red;
+        color:$red;
         background-image: -ms-linear-gradient(top, $gray_bottom 0%, $gray_top 100%);
         background-image: -moz-linear-gradient(top, $gray_bottom 0%, $gray_top 100%);
         background-image: -o-linear-gradient(top, $gray_bottom 0%, $gray_top 100%);
