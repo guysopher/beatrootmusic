@@ -39,6 +39,13 @@ $(window).resize(function(e){
     resize();
 });
 
+$(window).scroll(function() {
+    $(".logo").css({
+        "-webkit-transform": "rotate(" + ($(this).scrollTop() / -10) + "deg)",
+        "-moz-transform": "rotate(" + ($(this).scrollTop() / -10) + "deg)"
+    });
+});
+
 $(function(){
 //    $('#banner').unslider();
 //    coverCycleId = Math.random();

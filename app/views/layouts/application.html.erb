@@ -13,7 +13,9 @@
 </head>
 <body>
 <div id="bg" class="container <%='guy' if params['guy']%>"></div>
-<img src="http://www.beatrootmusic.co.uk/files/stacks_image_63.png" class="logo" />
+<% if params['guy'] %>
+    <img src="http://www.beatrootmusic.co.uk/files/stacks_image_63.png" class="logo" />
+<% end %>
 <div id="wrapper" class="container">
     <div id="banner" class="container <%='guy' if params['guy']%>" style="background-image:url('assets/banner/<%=%w(1 2 3).sample%>.jpg')">
       <!--<ul class="banner">-->

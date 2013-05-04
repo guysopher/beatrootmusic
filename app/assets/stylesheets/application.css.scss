@@ -58,7 +58,7 @@ body{
   position:fixed;
   left:30px;
   top:30px;
-  width:60px;
+  z-index: 10;
 }
 
 #wrapper{
