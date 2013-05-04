@@ -16,10 +16,10 @@
 
 
 function show_page(nav, page){
-    $('#' + page).css('position:absolute;').show();
-    $('.page.active').fadeOut();
+    $('#' + page).show();
+    $('.page.active').hide();
     $('.page').removeClass('active');
-    $('#' + page).css('position:relative;').addClass('active');
+    $('#' + page).addClass('active');
     $('.nav li').removeClass('active');
     $(nav).addClass('active');
 }
