@@ -38,3 +38,9 @@ function resize(){
 $(window).resize(function(e){
     resize();
 });
+
+$(function(){
+//    $('#banner').unslider();
+//    coverCycleId = Math.random();
+//    cover_image_cycle($('div#banner'), coverCycleId);
+});

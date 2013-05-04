@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= yield(:css) if content_for?(:css) %>
   <%= javascript_include_tag "application" %>
+  <!--<script src="//unslider.com/unslider.min.js"></script>-->
   <%= yield(:head_js) if content_for?(:head_js) %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
@@ -12,7 +13,13 @@
 <body>
 <div id="bg" class="container"></div>
 <div id="wrapper" class="container">
-    <div id="banner" class="container"></div>
+    <div id="banner" class="container">
+      <!--<ul class="banner">-->
+        <!--<li class="banner" style="background-image:url('assets/banner/1.jpg')"></li>-->
+        <!--<li class="banner" style="background-image:url('assets/banner/2.jpg')"></li>-->
+        <!--<li class="banner" style="background-image:url('assets/banner/3.jpg')"></li>-->
+      <!--</ul>-->
+    </div>
     <div id="sidebar" class="container">
         <%= render 'layouts/sidebar' %>
     </div>

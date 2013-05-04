@@ -54,16 +54,36 @@ body{
     margin:auto;
 }
 #banner{
-    height:400px;
-    width:100%;
-    background: #111 url("banner/Beatroot_WebBanner_01.jpg") no-repeat center center; /*url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/375236_541774795833230_1975850575_b.jpg) no-repeat center center fixed;*/
-    //-webkit-background-size: cover;
-    //-moz-background-size: cover;
-    //-o-background-size: cover;
-    //background-size: cover;
-    position:relative;
-    margin:10px 0;
-    border-radius:2px;
+  height:400px;
+  width:100%;
+  background: #111 url("banner/3.jpg") no-repeat center center; /*url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/375236_541774795833230_1975850575_b.jpg) no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position:relative;
+  margin:10px 0;
+  border-radius:2px;
+
+  ul{
+    list-style: none;
+    li{
+      float:left;
+    &.banner{
+      height:400px;
+      width:100%;
+      background: #111 url("banner/Beatroot_WebBanner_01.jpg") no-repeat center center; /*url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/375236_541774795833230_1975850575_b.jpg) no-repeat center center fixed;*/
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      position:absolute;
+      display:block;
+      top:0;
+      left:0;
+    }
+    }
+  }
 }
 
 #sidebar{
