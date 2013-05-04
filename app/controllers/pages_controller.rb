@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   layout 'admin'
 
   def index
-    @pages = Page.order("'order'")
+    @pages = Page.order("pages.order")
 
     respond_to do |format|
       format.html # index.html.erb
