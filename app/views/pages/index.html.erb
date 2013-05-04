@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Id</th>
+    <th>Order</th>
     <th>Name</th>
     <th>Content</th>
     <th></th>
@@ -13,6 +14,7 @@
 <% @pages.each do |page| %>
   <tr>
     <td><%= page.id %></td>
+    <td><%= page.order %></td>
     <td><%= page.name %></td>
     <td><%= page.content %></td>
     <td><%= link_to 'Show', page %></td>

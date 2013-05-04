@@ -1,5 +1,7 @@
-<% @pages.each do |p| %>
-   <div id='<%=p.name.downcase%>' class='page'>
+<% first=true %>
+    <% @pages.each do |p| %>
+    <div id='<%=p.name.downcase%>' class='page <%=first ? 'active' : ''%>'>
        <%=raw p.content%>
    </div>
+   <% first=false %>
 <% end %>
