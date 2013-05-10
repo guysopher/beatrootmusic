@@ -29,7 +29,7 @@ function resize(){
     var w = bWidth - 400 - 10;
     $('#content').css({
         'width' : w,
-        'min-height' : sHeight
+//        'min-height' : sHeight
     });
     $('#content .nav li').css({
         'width' : ((w-10) / ($('#content .nav li').length)) - 2,
