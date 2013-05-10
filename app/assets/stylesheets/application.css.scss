@@ -139,7 +139,7 @@ body{
   height: auto;
   width:100%;
   float:left;
-  overflow-x:hidden;
+  overflow-x:visible;
   background: #353334;
   border-radius:2px;
   min-height: 500px;
@@ -159,6 +159,14 @@ body{
   p{
     font-size:13px;
     color:$white;
+    &.dark{
+      background: #141414;
+    }
+    &.light{
+      background: -moz-linear-gradient(right, #141414 0%, #272324 100%, #141414 100%, #272324 100%); /* FF3.6+ */
+      background: -webkit-linear-gradient(right, #141414 0%, #272324 100%, #141414 100%, #272324 100%); /* FF3.6+ */
+
+    }
   }
   a{
     font-size:13px;
