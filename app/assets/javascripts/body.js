@@ -16,14 +16,14 @@ $(function(){
     resize();
 });
 
-$(window).scroll(function(e){
-    var h = Math.max(0, (bHeight - $(window).scrollTop()));
-    var p = Math.min(bHeight, $(window).scrollTop());
-    $('#banner').css({
-        'height' : h,
-        'margin-top' : p + 10
-    });
-});
+//$(window).scroll(function(e){
+//    var h = Math.max(0, (bHeight - $(window).scrollTop()));
+//    var p = Math.min(bHeight, $(window).scrollTop());
+//    $('#banner').css({
+//        'height' : h,
+//        'margin-top' : p + 10
+//    });
+//});
 
 function resize(){
     var w = bWidth - 400 - 10;

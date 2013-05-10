@@ -1,7 +1,9 @@
 <% first=true %>
     <% @pages.each do |p| %>
     <div id='<%=p.name.downcase%>' class='page <%=first ? 'active' : ''%>'>
-       <%=raw p.content%>
+      <img class="name" src="assets/tag_<%=p.name.downcase%>.jpg"/>
+      <!--<div class="name"><%=p.name%></div>-->
+      <%=raw p.content%>
    </div>
    <% first=false %>
 <% end %>
