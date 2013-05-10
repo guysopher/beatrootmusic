@@ -165,8 +165,10 @@ body{
     font-size:14px;
     font-weight: normal;
     color:$txwhite;
-    margin: 0 -10px 0 -40px;
-    padding: 10px 10px 10px 40px;
+    &.dark, &.light{
+      margin: 0 -10px 0 -40px;
+      padding: 10px 10px 10px 40px;
+    }
     &.dark{
       background: #141414;
     }
