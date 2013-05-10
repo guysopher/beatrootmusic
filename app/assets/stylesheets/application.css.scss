@@ -39,7 +39,7 @@ body{
     top:0;
     left:0;
     position: fixed;
-    background: #111 url("bg.png") no-repeat center center;
+    background: #313131;//#111 url("bg.png") no-repeat center center;
   &.guy{
     background: #111 url("banner/1.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -64,7 +64,7 @@ body{
 #wrapper{
     height: 100%;
     width: 100%;
-    width: 1024px;
+    width: 900px; //1024px
     position: relative;
     margin:auto;
 }
@@ -149,11 +149,11 @@ body{
   font-family: 'Arial', serif;
   font-weight:400;
   line-height:1.5;
-  background: -moz-linear-gradient(top, #3f3f3f 0%, #3f3f3f 50px, #292526 333px, #292526 100%, #3f3f3f 100%, #292526 100%); /* FF3.6+ */
-  background: -webkit-linear-gradient(top, #3f3f3f 0%,#3f3f3f 50px,#292526 333px,#292526 100%,#3f3f3f 100%,#292526 100%); /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, #3f3f3f 0%, #3f3f3f 50px, #292526 383px, #292526 100%, #3f3f3f 100%, #292526 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top, #3f3f3f 0%,#3f3f3f 50px,#292526 383px,#292526 100%,#3f3f3f 100%,#292526 100%); /* Chrome10+,Safari5.1+ */
 
   h1{
-    font-size:28px;
+    font-size:22px;
     color:$red;
   }
   p{
@@ -183,9 +183,9 @@ body{
     position:relative;
     .name{
       position: absolute;
-      left: -40px;
-      height: 376px
-    }
+      left: -41px;
+      z-index: 10;
+      height: 110px;    }
   }
   .active{
     display:block;
