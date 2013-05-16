@@ -39,7 +39,7 @@ function banner_image_cycle(sl, cycleId){
     }
 
     clearTimeout(bannerTimeout)
-    var eles = sl.find('img.banner.cycle');
+    var eles = sl.find('img.cycle');
     if (!eles.length>0) return false;
 
     var ele = eles.first();
@@ -67,3 +67,10 @@ function banner_image_cycle(sl, cycleId){
     }
     return true;
 }
+
+function subscribe(){
+    $("form#subscribe").fadeOut(1000, function(){
+        $("#subscription_complete").show();
+    });
+}
+

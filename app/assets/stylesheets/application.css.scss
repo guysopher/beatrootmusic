@@ -64,7 +64,7 @@ body{
 
 #wrapper{
     height: 100%;
-    width: 96%;
+    width: 92%;
     min-width: 640px;
     max-width: 1280px;
     position: relative;
@@ -123,10 +123,43 @@ body{
       margin-bottom: -7px;
     }
     &#mailing_list{
+      #subscribe{
+        width:220px;
+        margin:auto;
+        display:block;
+        padding:10px;
+        input#subscribe_button{
+          border-radius: 5px;
+          background: $red;
+          color: $txwhite;
+          text-transform: uppercase;
+          font-weight: bold;
+          border: 1px solid #111;
+          height: 30px;
+          margin: auto;
+          display: block;
+        }
+      }
+      #subscription_complete{
+        display:none;
+        padding: 20px;
+        h1{
+          color: $red;
+          font-size: 15px;
+          line-height: 20px;
+          font-weight: bold;
+        }
+        p{
+          color: $txwhite;
+          font-size: 13px;
+          line-height: 17px;
+          font-weight: normal;
+        }
+      }
       .title{
         font-size:16px;
         text-align:center;
-        color:$txwhite;
+        color:$red;
         padding:10px;
       }
       .input{
