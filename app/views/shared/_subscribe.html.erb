@@ -1,9 +1,11 @@
 <%= form_tag 'http://us6.api.mailchimp.com/1.3/?method=listSubscribe', :remote => true, :id => 'subscribe' do %>
     <div class='title'>Join our Mailing List!</div>
     <p>
-      <b> <%= label_tag 'Email Address' %></b> <%= text_field_tag 'email_address', nil, :maxlength => 20, :size => 70 %>
+      <b> <%# label_tag 'Email Address' %></b> <%= text_field_tag 'email_address', nil, :maxlength => 20, :size => 70, :value=>'Enter your email address', :onfocus => '(this.value == "Enter your email address") ? this.value = "" : ""' %>
+      <!--
       <b> <%= label_tag 'First Name' %></b> <%= text_field_tag 'merge_vars[FNAME]', nil, :maxlength => 20, :size => 10 %>
       <b> <%= label_tag 'Last Name' %></b> <%= text_field_tag 'merge_vars[LNAME]', nil, :maxlength => 20, :size => 10%>
+      -->
     </p>
 
     <%= hidden_field_tag :apikey, '74af75263f66462744dad8521db3a52e-us6' %>
