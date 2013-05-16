@@ -16,54 +16,54 @@
 
 
 function show_page(nav, page){
-    $('#' + page).show();
     $('.page.active').hide();
-    $('.page').removeClass('active');
+    $('#' + page).show();
+        $('.page').removeClass('active');
     $('#' + page).addClass('active');
     $('.nav li').removeClass('active');
     $(nav).addClass('active');
+    banner_image_cycle($('#' + page), 0);
 }
 
-var coverCycleId = 0;
-var coverCycleMomentId = 0;
-var coverTimeout = 0;
-function cover_image_cycle(sl, cycleId){
+var bannerCycleId = 0;
+var bannerTimeout = 0;
+var bannerInterval = 5000;
+function banner_image_cycle(sl, cycleId){
 
-    if (cycleId != coverCycleId) return false
-    clearTimeout(coverTimeout)
+    if (cycleId>0) {
+        if (cycleId != bannerCycleId) return false
+    }else{
+        cycleId = bannerCycleId = parseInt(Math.random()*10000);
+        bannerTimeout = setTimeout(function(){banner_image_cycle(sl, cycleId); return}, bannerInterval);
+        return false;
+    }
 
-    var doCycle = true;
-    var eles = sl.children();
-    $(eles).each(function(){
-        if (!doCycle) return true;
-        if ($(this).is(':visible')){
-            $(this).fadeOut();
-            coverTimeout = setTimeout(function(){cover_image_cycle(sl, cycleId); return}, 2000);
-            doCycle = false;
-            return true;
-        }
-    });
-    if (!doCycle) return true;
-    $(eles).fadeIn();
-    coverTimeout = setTimeout(function(){cover_image_cycle(sl, cycleId); return}, 2000);
+    clearTimeout(bannerTimeout)
+    var eles = sl.find('img.banner.cycle');
+    if (!eles.length>0) return false;
+
+    var ele = eles.first();
+    var imgs = $.parseJSON(ele.attr('best'));
+    idx = ($.inArray(ele.attr('src'), imgs)+1) % imgs.length;
+    var src = imgs[idx];
+    if (ele.attr('src') != src) {
+        var cloned = ele.clone();
+        cloned.hide().attr('src', src).css({
+            'width':'100%',
+            'height':'auto',
+        });
+        ele.before(cloned);
+        cloned.load(function(){
+            cloned.show();
+            ele.css({
+                'position':'absolute',
+                'top':0,
+                'left':0
+            }).fadeOut(1500, function(){
+                eles.remove();
+                bannerTimeout = setTimeout(function(){banner_image_cycle(sl, cycleId); return}, bannerInterval);
+            });
+        });
+    }
     return true;
-
-//    var ele = eles.first();
-//    var imgs = $.parseJSON(sl.attr('imgs'));
-//    idx = ($.inArray(ele.attr('src'), imgs)+1) % imgs.length;
-//    var src = imgs[idx];
-//    if (ele.attr('src') != src) {
-//        var cloned = ele.clone();
-//        cloned.hide().attr('src', src).css('width','auto').css('height','auto');
-//        ele.before(cloned);
-//        cloned.load(function(){
-//            cloned.show();
-//            ele.fadeOut(1000, function(){
-//                eles.remove();
-//                coverTimeout = setTimeout(function(){cover_image_cycle(sl, cycleId); return}, 2000);
-//            });
-//        });
-//    }
-//    return true;
 }
-

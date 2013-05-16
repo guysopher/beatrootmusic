@@ -45,6 +45,8 @@ $(window).scroll(function() {
 });
 
 $(function(){
+    resize();
+    $('.nav ul li').first().click();
 //    $('#banner').unslider();
 //    coverCycleId = Math.random();
 //    cover_image_cycle($('div#banner'), coverCycleId);
