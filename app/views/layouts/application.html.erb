@@ -10,6 +10,8 @@
   <%= yield(:head_js) if content_for?(:head_js) %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
+
+  <link rel="shortcut icon" href="assets/favicon.ico" >
 </head>
 <body>
 <div id="bg" class="container <%='guy' if params['guy']%>"></div>
