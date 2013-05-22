@@ -46,6 +46,7 @@ $(window).scroll(function() {
 
 $(function(){
     resize();
+    setTimeout(function(){resize()}, 1000);
     $('.nav ul li').first().click();
 //    $('#banner').unslider();
 //    coverCycleId = Math.random();
