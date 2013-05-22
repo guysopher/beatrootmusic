@@ -320,3 +320,19 @@ body{
   }
 }
 
+#content{
+  .logo_link{
+    margin: 10px 0;
+    line-height: 40px;
+    vertical-align: middle;
+    img{
+      vertical-align: middle;
+      height:40px;
+      margin:0 10px 0 0;
+    }
+    a{
+      vertical-align: middle;
+    }
+  }
+}
+
