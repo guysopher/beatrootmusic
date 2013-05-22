@@ -124,10 +124,13 @@ body{
     }
     &#mailing_list{
       #subscribe{
-        width:220px;
+        width:288px;
         margin:auto;
         display:block;
         padding:10px;
+        p{
+          display:inline;
+        }
         input#subscribe_button{
           border-radius: 5px;
           background: $red;
@@ -135,9 +138,10 @@ body{
           text-transform: uppercase;
           font-weight: bold;
           border: 1px solid #111;
-          height: 30px;
+          height: 33px;
           margin: auto;
-          display: block;
+          display: inline;
+          margin-top: -12px;
         }
       }
       #subscription_complete{
